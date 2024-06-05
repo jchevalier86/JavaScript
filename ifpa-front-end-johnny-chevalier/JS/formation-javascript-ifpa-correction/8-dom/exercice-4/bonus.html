@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo 4 Bonus</title>
+  </head>
+
+  <body>
+    <button class="change-color-button">Changer la couleur</button>
+
+    <script>
+      const button = document.querySelector(".change-color-button");
+      const body = document.querySelector("body");
+
+      button.addEventListener("click", function () {
+        const tableauCouleurs = ["blue", "red", "green", "orange", "yellow"];
+
+        // Donne un index aleatoire entre 0 et 4 (pour un tableau de 5 elements)
+        const indexAleatoire = Math.floor(
+          Math.random() * tableauCouleurs.length
+        );
+        console.log(indexAleatoire);
+
+        // recupere une couleur aleatoire dans le tableau, grace à l'index
+        const couleur = tableauCouleurs[indexAleatoire];
+
+        // applique la couleur aléatoire au background du body
+        body.style.background = couleur;
+      });
+    </script>
+  </body>
+</html>

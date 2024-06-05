@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice Objet</title>
+  </head>
+  <body>
+    <script>
+      const personne1 = {
+        nom: "Doe",
+        prenom: "John",
+        age: 33,
+        email: "johndoe@gmail.com",
+        afficherInfos: function () {
+          console.log(
+            `Nom: ${this.nom}, Prénom: ${this.prenom}, Âge: ${this.age}, Email: ${this.email}`
+          );
+        },
+        miseAJourEmail: function (email) {
+          this.email = email;
+        },
+      };
+
+      const personne2 = {
+        nom: "Dupond",
+        prenom: "Michel",
+        age: 63,
+        email: "dup@gmail.com",
+        afficherInfos: function () {
+          console.log(
+            `Nom: ${this.nom}, Prénom: ${this.prenom}, Âge: ${this.age}, Email: ${this.email}`
+          );
+        },
+        miseAJourEmail: function (email) {
+          this.email = email;
+        },
+      };
+
+      const personne3 = {
+        nom: "Doe",
+        prenom: "Marie",
+        age: 39,
+        email: "mj@gmail.com",
+        afficherInfos: function () {
+          console.log(
+            `Nom: ${this.nom}, Prénom: ${this.prenom}, Âge: ${this.age}, Email: ${this.email}`
+          );
+        },
+        miseAJourEmail: function (email) {
+          this.email = email;
+        },
+      };
+
+      //   personne.age = 50
+      //   personne.telephone = "0836656565"
+
+      //   personne.afficherInfos()
+      //   personne.miseAJourEmail('toto@gmail.com')
+
+      //   console.log(personne);
+
+      const annuaire = [personne1, personne2, personne3];
+
+
+      function afficherAnnuaire(annuaire) {
+        for (const personne of annuaire) {
+            personne.afficherInfos()
+        }
+      }
+
+    //   afficherAnnuaire(annuaire)
+
+    function trouverPersonneParNom(annuaire, nom) {
+        for (const personne of annuaire) {
+            if (personne.nom === nom) {
+                personne.afficherInfos()
+            }
+        }
+    }
+
+    // trouverPersonneParNom(annuaire, 'Doe')
+
+    function filtrerPersonnesParAge (annuaire, ageMinimum, ageMaximum) {
+        let newAnnuaire = []
+
+        for (const personne of annuaire) {
+            if (personne.age >= ageMinimum && personne.age <= ageMaximum) {
+                newAnnuaire.push(personne)
+            }
+        }
+        return newAnnuaire
+    }
+
+    console.log(filtrerPersonnesParAge(annuaire,10, 100))
+
+    </script>
+  </body>
+</html>

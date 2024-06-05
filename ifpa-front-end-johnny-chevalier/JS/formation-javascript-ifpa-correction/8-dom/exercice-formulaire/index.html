@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice formulaire</title>
+</head>
+<body>
+    <input type="number" name="nombre">
+
+    <script>
+        const inputElement = document.querySelector('input')
+
+        inputElement.addEventListener('input', function(event) {
+            let valeur = event.target.value
+            if (valeur >= 50 && valeur <= 100) {
+                inputElement.style.background = 'green'
+            } else {
+                inputElement.style.background = 'red'
+            }
+        })
+    </script>
+</body>
+</html>

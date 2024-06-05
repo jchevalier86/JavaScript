@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo 9</title>
+  </head>
+
+  <body>
+    <button>+ 1</button>
+    <p>Compteur : <span class="compteur"></span></p>
+
+    <script>
+      const bouton = document.querySelector('button')
+      const compteurElement = document.querySelector('.compteur')
+
+      let compteur = 0
+      compteurElement.innerText = compteur
+      
+      bouton.addEventListener('click', function() {
+        compteur++
+        compteurElement.innerText = compteur
+      })
+
+    </script>
+  </body>
+</html>

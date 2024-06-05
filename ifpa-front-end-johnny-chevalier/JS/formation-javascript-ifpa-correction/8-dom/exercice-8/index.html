@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo 8</title>
+    <style>
+      li {
+        cursor: pointer;
+      }
+
+      .barre {
+        text-decoration: line-through;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <h1>todo</h1>
+    <ul>
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+      <li>item5</li>
+    </ul>
+
+    <script>
+      const items = document.querySelectorAll('li')
+      
+      for (const item of items) {
+        item.addEventListener('click', function() {
+          item.classList.toggle('barre')
+        })
+      }
+
+      // exemple pour appronfondir :
+      // ajouter un champ text et un bouton
+        // lorsque vous rentrez un texte et validez, 
+          // un item s'ajoute (avec le texte)
+      
+
+    </script>
+  </body>
+</html>

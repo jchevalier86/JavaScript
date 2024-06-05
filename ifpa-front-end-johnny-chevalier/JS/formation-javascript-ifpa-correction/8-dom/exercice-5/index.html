@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo 5</title>
+  </head>
+
+  <body>
+    <script>
+      function createTag(tagName, content) {
+        let element = document.createElement(tagName);
+        element.innerText = content;
+
+        return element;
+      }
+
+      const elementDiv = createTag("div", "bonjour le monde ");
+      document.body.appendChild(elementDiv);
+      
+    </script>
+  </body>
+</html>

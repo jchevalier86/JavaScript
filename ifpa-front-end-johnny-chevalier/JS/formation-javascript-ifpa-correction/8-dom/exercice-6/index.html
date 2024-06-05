@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo 6</title>
+    <style>
+      .error-message {
+        color: red;
+        font-weight: 900;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <form action="">
+      <input type="text" name="nom">
+      <button>Soumettre</button>
+      <span class="error-message"></span>
+    </form>
+
+
+    <script>
+
+      const formulaire = document.querySelector('form')
+      const errorMessageSpan = document.querySelector('.error-message')
+
+      formulaire.addEventListener('submit', function(e) {
+        e.preventDefault()
+
+        const form = event.currentTarget; 
+        const data = new FormData(form);
+        const nom = data.get("nom");
+
+        if (nom.length === 0) {
+          errorMessageSpan.innerText = 'le champ ne doit pas vide'
+        } else if (nom.length < 5) {
+          errorMessageSpan.innerText = 'le nom doit comporter au moins 5 caracteres'
+        } else {
+          errorMessageSpan.innerText = ''
+          alert('Le nom est correct : ' + nom)
+          // formulaire.submit() // si vous avez besoin de soumettre manuellement le formulaire.
+        }
+
+
+      })
+
+
+
+
+
+    </script>
+  </body>
+</html>

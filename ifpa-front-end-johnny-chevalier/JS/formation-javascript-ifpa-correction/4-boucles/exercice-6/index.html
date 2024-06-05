@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+</head>
+<body>
+    <script>
+        const nombreSecret = 12
+
+        let essai = 1
+        let word = 'essai'
+        let essaisRestants = 5
+        
+        let nombre = parseInt(prompt('votre nombre :'))
+        essaisRestants--
+        
+        while (nombre !== nombreSecret && essaisRestants > 0) {
+            if (nombre < nombreSecret) {
+                nombre = parseInt(prompt(`Trop petit. Il vous reste ${essaisRestants} essais`))
+            } else if (nombre > nombreSecret) {
+                nombre = parseInt(prompt(`Trop grand. Il vous reste ${essaisRestants} essais`))
+            }
+            essai++
+            essaisRestants--
+            word = 'essais'
+        }
+        if (nombre === nombreSecret) {
+            alert(`vous avez réussi en ${essai} ${word}`)
+        } else {
+            alert(`vous avez échoué (vous n'avez plus d'essais)`)
+        }
+        
+    </script>
+</body>
+</html>

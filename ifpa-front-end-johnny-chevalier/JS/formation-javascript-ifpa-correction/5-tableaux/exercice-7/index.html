@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+</head>
+<body>
+    <script>
+        const nombres = [10, 22, 3, 47, 5]
+
+        let somme = 0
+        for (const nombre of nombres) {
+            somme += nombre
+        }
+        console.log(somme);
+        
+        let moyenne = somme / nombres.length
+        console.log(moyenne);
+
+        let nombreLePlusGrand = nombres[0]
+        let nombreLePlusPetit = nombres[0]
+
+        for (const nombre of nombres) {
+            if (nombre > nombreLePlusGrand) {
+                nombreLePlusGrand = nombre
+            }
+            if (nombre < nombreLePlusPetit) {
+                nombreLePlusPetit = nombre
+            }
+        }
+        console.log(nombreLePlusGrand);
+        console.log(nombreLePlusPetit);
+    </script>
+</body>
+</html>

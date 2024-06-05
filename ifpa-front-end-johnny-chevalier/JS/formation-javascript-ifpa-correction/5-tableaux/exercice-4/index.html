@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+</head>
+<body>
+    <script>
+        // 1a
+        let nombres = []
+        for (let i = 1; i <= 10; i++) {
+            nombres.push(i)
+        }
+        console.log(nombres)
+
+        // 1b
+        let phrase = "Les dix premiers nombres sont : "
+        for (let i = 0; i < nombres.length; i++) {
+            if (nombres.length - 1 === i) {
+                phrase += `${nombres[i]}`
+            } else {
+                phrase += `${nombres[i]},`
+            }
+        }
+        console.log(phrase);
+
+        //2a
+        let nombresPairs = []
+        for (let i = 2; i <= 20; i+=2) {
+            nombresPairs.push(i)
+        }
+        console.log(nombresPairs)
+
+        //2b
+        let phrase2 = "Les dix premiers nombres pairs sont : "
+        for (let i = 0; i < nombresPairs.length; i++) {
+            if (nombresPairs.length - 1 === i) {
+                phrase2 += `${nombresPairs[i]}`
+            } else {
+                phrase2 += `${nombresPairs[i]},`
+            }
+        }
+        console.log(phrase2);
+
+    </script>
+</body>
+</html>

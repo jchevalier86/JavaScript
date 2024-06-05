@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice</title>
+  </head>
+  <body>
+    <script>
+      let mots = [
+        "arbre",
+        "soleil",
+        "lumière",
+        "pomme",
+        "ordinateur",
+        "livre",
+        "bouteille",
+        "téléphone",
+        "fenêtre",
+        "chaise",
+        "table",
+        "voiture",
+        "ciel",
+        "eau",
+        "ordinateur",
+        "souris",
+        "clavier",
+        "écran",
+        "lampe",
+        "bureau",
+      ];
+      let petitsMots = [];
+      let grandsMots = [];
+
+      for (const mot of mots) {
+        if (mot.length < 7) {
+            petitsMots.push(mot)
+        } else {
+            grandsMots.push(mot)
+        }
+      }
+      
+      console.log(petitsMots, grandsMots);
+      console.log(`Il y a ${petitsMots.length} petits mots et ${grandsMots.length} grands mots.`);
+    </script>
+  </body>
+</html>

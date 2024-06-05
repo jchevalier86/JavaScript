@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice</title>
+  </head>
+  <body>
+    <script>
+      const jours = [
+        "Lundi",
+        "Mardi",
+        "Mercredi",
+        "Jeudi",
+        "Vendredi",
+        "Samedi",
+        "Dimanche",
+      ];
+      console.table(jours)
+
+      for (let i = 0; i < jours.length; i++) {
+        let phrase = `Le jour ${i + 1} de la semaine est ${jours[i]}`
+        if (i === jours.length - 1) {
+            phrase += ` et le ${jours[i]} c'est Gratuit !`
+        }
+        console.log(phrase);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 4</title>
+  </head>
+  <body>
+    <script>
+      // degFar = (degCel * (9/5) + 32)
+
+      function degFar(degCel) {
+        if (typeof degCel !== 'number') {
+          return "Données en entrée non-correctes."
+        }
+
+        return Math.round(degCel * (9/5) + 32)
+      }
+
+      console.log(degFar(25))
+    </script>
+  </body>
+</html>

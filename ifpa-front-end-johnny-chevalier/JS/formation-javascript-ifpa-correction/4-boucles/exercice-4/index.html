@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+</head>
+<body>
+    <script>
+        const motDePasse = '1234';
+        let motDePasseUtilisateur = prompt('Entrez votre mot de passe');
+
+        while (motDePasseUtilisateur !== motDePasse) {
+            motDePasseUtilisateur = prompt('Mot de passe incorrect, essayez à nouveau.');
+        }
+        alert('Ok !')
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+</head>
+<body>
+    <script>
+        function addition(a, b) {
+            if (typeof a !== 'number' || typeof b !== 'number') {
+                return 'paramètres incorrects'
+            }
+            return a + b
+        }
+        console.log(addition(5, 8)) // 13
+
+        function soustraction(a, b) {
+            if (typeof a !== 'number' || typeof b !== 'number') {
+                return 'paramètres incorrects'
+            }
+            return a - b
+        }
+        console.log(soustraction(8, 5)) // 3
+
+        function multiplication(a, b) {
+            if (typeof a !== 'number' || typeof b !== 'number') {
+                return 'paramètres incorrects'
+            }
+            return a * b
+        }
+        console.log(multiplication(8, 5)) // 40
+
+        function division(a, b) {
+            if (typeof a !== 'number' || typeof b !== 'number') {
+                return 'paramètres incorrects'
+            }
+            return a / b
+        }
+        console.log(division(10, 5)) // 2
+
+    </script>
+</body>
+</html>
